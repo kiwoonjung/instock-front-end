@@ -1,0 +1,111 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.tablet-inv {
+  display: none;
+
+  @include tablet {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+    align-items: center;
+    border-bottom: 0.0625rem solid $cloud;
+  }
+
+  &__title {
+    @include dt-p2;
+    color: $instockIndigo;
+    font-weight: 600;
+    width: 7.135rem;
+  }
+
+  &__icon {
+    display: flex;
+    color: $instockIndigo;
+
+    @include tablet {
+      width: 8rem;
+    }
+  }
+
+  &__stock-box {
+    width: 5.75rem;
+  }
+
+  &__stock-bg {
+    @include m-h4;
+    color: $green;
+    background: rgba(21, 132, 99, 0.07);
+    border-radius: 1.25rem;
+    width: 3.8125rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0rem;
+    }
+  }
+
+  &__outofstock-bg {
+    @include m-h4;
+    color: #c94515;
+    background: rgba(201, 69, 21, 0.07);
+    border-radius: 1.25rem;
+    width: 3.8125rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      width: 5.4375rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  &__stock {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  }
+
+  &__outofstock {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  }
+
+  &__category {
+    @include dt-p2;
+    width: 4.9406rem;
+
+    @include desktop {}
+  }
+
+  &__qty {
+    @include dt-h3;
+    font-weight: 400;
+    width: 1.525rem;
+
+    @include desktop {
+      width: 2.125rem;
+    }
+  }
+
+  &__warehouse {
+    @include dt-h3;
+    font-weight: 400;
+    width: 5.805rem;
+  }
+
+  &__name {
+    @include dt-p2;
+  }
+
+  &__info {
+    @include dt-p2;
+  }
+
+  &__btn {
+    background-color: $white;
+    border: hidden;
+  }
+
+  &__btn-box {
+    display: flex;
+    gap: 1.5rem;
+  }
+}

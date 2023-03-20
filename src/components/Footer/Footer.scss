@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  @include m-p3;
+  background-color: #F7F8F9;
+  color: #5C667E;
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  justify-content: center;
+
+  @include tablet {
+    @include dt-p3;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @include desktop {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}

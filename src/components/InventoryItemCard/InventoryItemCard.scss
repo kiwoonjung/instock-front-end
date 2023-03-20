@@ -1,0 +1,136 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.whdInv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  border-top: solid 1px $cloud;
+
+  @include desktop {
+    padding: 1rem 2.5rem;
+  }
+
+  &__item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      width: 20%;
+      order: 0;
+      padding-bottom: 0;
+    }
+
+    &--title {
+      @include m-h4;
+      margin-bottom: 0.25rem;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    width: 50%;
+
+    @include tablet {
+      width: 32%;
+      order: 1;
+      padding-bottom: 0;
+    }
+
+    &--title {
+      @include m-h4;
+      width: 100%;
+      margin-bottom: 0.25rem;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--status {
+      width: 100%;
+    }
+
+    &--text {
+      width: 50%;
+    }
+  }
+
+  &__category {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include m-p2;
+
+    @include tablet {
+      @include dt-p2;
+      width: 18%;
+      order: 0;
+    }
+
+    @include desktop {
+      width: 17%;
+    }
+
+    &--title {
+      @include m-h4;
+
+      @include tablet {
+        display: none;
+      }
+
+    }
+  }
+
+  &__qty {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include m-p2;
+
+    @include tablet {
+      @include dt-p2;
+      width: 20%;
+      order: 2;
+    }
+
+    &--title {
+      @include m-h4;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0 0 0;
+
+    @include tablet {
+      width: 10%;
+      display: flex;
+      justify-content: flex-start;
+      order: 3;
+      padding: 0;
+
+      &--delete {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+}

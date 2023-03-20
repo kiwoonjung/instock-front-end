@@ -1,0 +1,108 @@
+@use './styles/partials/mixins' as *;
+@use './styles/partials/reset' as *;
+@use './styles/partials/typography' as *;
+@use './styles/partials/variables' as *;
+
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.button {
+    height: 2.25rem;
+    padding: 0 1rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    @include m-h3;
+
+    @include tablet {
+        height: 2.375rem;
+        @include dt-h3;
+    }
+
+    &--primary {
+        @extend .button;
+        background-color: $instockIndigo;
+        color: $white;
+        border: solid 1px $instockIndigo;
+
+        &:hover {
+            background-color: $graphite;
+            border: solid 1px $graphite;
+        }
+    }
+
+    &--secondary {
+        @extend .button;
+        background-color: $white;
+        border: solid 1px $cloud;
+        color: $slate;
+
+        &:hover {
+            border: solid $instockIndigo 1px;
+            color: $instockIndigo;
+        }
+    }
+
+    &--delete {
+        @extend .button;
+        background-color: $red;
+        color: $white;
+        border: none;
+
+        &:hover {
+            background-color: $graphite;
+        }
+    }
+}
+
+
+.stock-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    @include m-h4;
+    height: 1.5rem;
+    padding: 0 .5rem;
+    border-radius: 1.25rem;
+
+    @include tablet {
+        height: 26px;
+        @include dt-h4;
+    }
+
+    &--instock {
+        @extend .stock-status;
+        color: #158463;
+        background-color: rgb(21, 132, 99, 0.07);
+    }
+
+    &--outstock {
+        @extend .stock-status;
+        color: #c94515;
+        background-color: rgb(201, 69, 21, 0.07);
+    }
+}
+
+.inventory-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 1.5rem;
+    @include m-h3;
+    color: $instockIndigo;
+
+    @include tablet {
+        @include dt-h3;
+    }
+}

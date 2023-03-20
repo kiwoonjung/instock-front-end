@@ -1,0 +1,200 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+a {
+  text-decoration: none;
+}
+
+.tablet {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+    align-items: center;
+    border-bottom: 0.0625rem solid $cloud;
+    background: $white;
+  }
+
+  &__title {
+    @include dt-p2;
+    color: $instockIndigo;
+    font-weight: 600;
+    width: 6.6rem;
+  }
+
+  &__icon {
+    display: flex;
+    color: $instockIndigo;
+  }
+
+  &__address {
+    @include dt-p2;
+    width: 6.25rem;
+
+    @include desktop {
+      width: 15.6875rem;
+    }
+  }
+
+  &__info {
+    width: 6.8631rem;
+  }
+
+  &__name {
+    @include dt-p2;
+    width: 6.8631rem;
+  }
+
+  &__info {
+    @include dt-p2;
+    width: 8rem;
+  }
+
+  &__btn {
+    background-color: $white;
+    border: hidden;
+  }
+
+  &__btn-box {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.tablet__hover:hover {
+  @include desktop {
+    border-bottom: 0.0625rem solid $instockIndigo;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 1.6875rem 1.5rem;
+  border-top: 0.0625rem solid $cloud;
+  background: $white;
+
+  @include tablet {
+    display: none;
+  }
+
+  &__first {
+    @include tablet {}
+  }
+
+  &__second {
+    @include tablet {}
+  }
+
+  &__title {
+    @include m-h4;
+    color: $slate;
+    padding-bottom: 0.25rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__info-warehouse {
+    @include m-h3;
+    color: $instockIndigo;
+    padding-bottom: 1rem;
+  }
+
+  &__info-icon {
+    display: flex;
+    align-items: center;
+    color: $instockIndigo;
+  }
+
+  &__info-name {
+    @include m-h3;
+    color: $instockBlack;
+    font-weight: 400;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__info-address {
+    @include m-h3;
+    color: $instockBlack;
+    font-weight: 400;
+    width: 6.9375rem;
+    padding-bottom: 1.1875rem;
+
+    @include tablet {
+      width: 5.4375rem;
+    }
+  }
+
+  &__info-number {
+    @include m-h3;
+    color: $instockBlack;
+    font-weight: 400;
+  }
+
+  &__info-email {
+    @include m-h3;
+    color: $instockBlack;
+    font-weight: 400;
+    padding-bottom: 1.1875rem;
+  }
+
+  &__info-icon {
+    display: flex;
+
+    @include tablet {
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__tablet-btn {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__delete {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__edit {
+    display: flex;
+    padding-left: 6.5rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+
+  &__delete {
+    background-color: $white;
+    border: hidden;
+    padding: 0;
+  }
+
+  &__edit {
+    background-color: $white;
+    border: hidden;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

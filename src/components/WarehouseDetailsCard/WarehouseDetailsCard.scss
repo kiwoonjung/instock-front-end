@@ -1,0 +1,200 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.whdHeader {
+  &>* {
+    color: $instockBlack;
+  }
+
+  margin: 0rem 1rem;
+  border: solid 1px white;
+  border-radius: 4px;
+  position: relative;
+  bottom: 4.0625rem;
+  background-color: white;
+  width: 100%;
+
+  @include tablet {
+    bottom: 5.1875rem;
+  }
+
+  @include desktop {
+    margin: 0 5.625rem;
+  }
+
+  &__header {
+    @include m-h1;
+    padding: 0 1rem;
+    margin: 2rem 0rem 0 0rem;
+    height: 3.125rem;
+    border-bottom: solid 1px $cloud;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    @include desktop {
+      padding: 0 2.5rem;
+    }
+  }
+
+  &__back {
+    width: 5;
+  }
+
+  &__warehouse {
+    width: 85%;
+    margin-bottom: .5625rem;
+  }
+
+  & &__icon {
+    background-color: $instockIndigo;
+    border-radius: 100%;
+    height: 2.25rem;
+    width: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      display: none;
+    }
+
+    &--icon {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    &--text {
+      padding-left: 0.25rem;
+    }
+  }
+}
+
+.whdDetails {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    padding: 1.5rem 2.5rem;
+  }
+
+  &__top {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @include tablet {
+      width: 35%;
+      margin-bottom: 0rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    @include tablet {
+      width: 65%;
+      padding-left: 2rem;
+      padding-bottom: 0;
+      border-left: solid 1px $cloud;
+    }
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__address,
+  &__name,
+  &__role,
+  &__phone,
+  &__email {
+    @include m-p2;
+
+    @include tablet {
+      @include dt-p2;
+    }
+  }
+
+  &__addressTitle,
+  &__contactName,
+  &__contactTitle {
+    @include m-h4;
+
+    @include tablet {
+      @include dt-h4;
+    }
+  }
+}
+
+.whdTable {
+  display: none;
+  padding: 1rem;
+  background-color: rgba(247, 248, 249, 0.7);
+  @include dt-h4;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row
+  }
+
+  @include desktop {
+    padding: 1rem 2.5rem;
+  }
+
+  &>* {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    width: 20%;
+  }
+
+  &__cat {
+    width: 18%;
+
+    @include desktop {
+      width: 17%;
+    }
+  }
+
+  &__status {
+    width: 32%;
+  }
+
+  &__qty {
+    width: 20%;
+  }
+
+  &__actions {
+    width: 10%;
+  }
+}
